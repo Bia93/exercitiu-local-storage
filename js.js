@@ -14,6 +14,8 @@ let objects = {
 };
 let x = JSON.stringify(objects); //imi transforma un obiect intr un string
 let y = localStorage.setItem("products", x);
-console.log(y);
-let z = JSON.parse(y);
-console.log(z);
+let z = localStorage.getItem("products"); // am preluat arrayul din localstorage
+let valueParse = JSON.parse(z); // am transformat arrayul in obiect
+valueParse.placavideo = "rtx 4000"; // AM ADAUGAT NOUL OBIECT
+let a = JSON.stringify(valueParse); //imi transf obiectul in string
+let b = localStorage.setItem("products", a); // am setat ca sa apara in local storage, placa video
